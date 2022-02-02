@@ -14,7 +14,18 @@
       "UpstreamPathTemplate": "/users",
       "UpstreamHttpMethod": [ "GET", "POST" ]
     },
-
+    {
+      "DownstreamPathTemplate": "/api/user",
+      "DownstreamSchema": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "30535"
+        }
+      ],
+      "UpstreamPathTemplate": "/system-user",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
     {
       "DownstreamPathTemplate": "/api/user/{id}",
       "DownstreamSchema": "http",
