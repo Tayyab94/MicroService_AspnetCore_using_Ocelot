@@ -1,0 +1,31 @@
+{
+  "title": "JSON schema for the .NET global configuration file",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/user",
+      "DownstreamSchema": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "30535"
+        }
+      ],
+      "UpstreamPathTemplate": "/users",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/user/{id}",
+      "DownstreamSchema": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "30535"
+        }
+      ],
+      "UpstreamPathTemplate": "/user/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ]
+}
